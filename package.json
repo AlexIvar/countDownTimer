@@ -1,0 +1,14 @@
+{
+  "name": "countdownapp",
+  "version": "1.0.0",
+  "description": "this is a beautifull countdown timer for the web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alex ivar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
