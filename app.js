@@ -7,6 +7,8 @@ app.get("/", function(req, res){
 	res.sendFile('index.html' , { root : __dirname});
 })
 
-app.listen(PORT, function(){
+module.exports = app;
+
+/*app.listen(PORT, function(){
 	app.set('port', process.env.PORT || PORT);
-})
+})*/
