@@ -8,5 +8,5 @@ app.get("/", function(req, res){
 })
 
 app.listen(PORT, function(){
-	console.log("app starting on port " + PORT)
+	app.set('port', process.env.PORT || PORT);
 })
