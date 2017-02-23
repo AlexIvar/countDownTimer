@@ -3,18 +3,43 @@
 	<header>
 		<title>countDownTimer</title>
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+    <link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	</header>
 	<body style="background-color:#1E1E1E;">
-		<h1 style="text-align: center; color:	#f9f9f9;">Velkomin/n á unglingasamkomu!</h1>
+	<!--	<h1 style="text-align: center; color:	#f9f9f9;">Velkomin/n á unglingasamkomu!</h1>-->
 		<div class="container">
 			<div id="theClock" style="position:absolute; left:50%; top:50%; font-size:900%; margin-left: -162px;  margin-top: -95px; color:#f9f9f9;">
 				10:00
 			</div>
 	  </div>
-<button onclick="countDown()">Click me</button>
+
+		<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Setup clock!</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+					Minutes: <input id="minutes" type="number" max="60" min="0"/>
+					Seconds: <input id="seconds" type="number" max="60" min="0"/>
+				</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="countDown(document.getElementById('minutes').value, document.getElementById('seconds').value)">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!--<script src="http://cdn.jsdelivr.net/mojs/latest/mo.min.js"></script>-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="/scripts/build/mo.min.js"></script>
 <script type="text/javascript" src="timer.js"></script>
 	</body>
